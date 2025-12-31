@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace quiz1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251231115826_initialcreate1")]
+    [Migration("20251231185919_initialcreate1")]
     partial class initialcreate1
     {
         /// <inheritdoc />

@@ -45,8 +45,8 @@ public class QuizController : Controller
 
 
 
-// GET: Quiz/Delete/5
-public IActionResult Delete(int id)
+    // GET: Quiz/Delete/5
+    public IActionResult Delete(int id)
     {
         var question = _context.QuizQuestions.Find(id);
         if (question == null)
@@ -66,6 +66,8 @@ public IActionResult Delete(int id)
         _context.SaveChanges();
         return RedirectToAction(nameof(Index));
     }
+
+  
 }
 
 
