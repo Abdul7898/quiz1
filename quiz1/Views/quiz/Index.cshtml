@@ -1,0 +1,27 @@
+﻿@model IEnumerable<quiz1.Models.Entity.QuizQuestion>
+
+<h2>Quiz Questions</h2>
+
+<a asp-action="Create" class="btn btn-primary">Add New Question</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Correct Option</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.QuestionText</td>
+                <td>@item.CorrectOption</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
